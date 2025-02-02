@@ -47,11 +47,13 @@ async function handleCommand(command) {
         console.log('Adding student...')
         const [name, year, email, specialization] = args
         // --------> WRITE YOUR CODE BELOW
+        studentManagementSystem.addStudent(args)
 
         // --------> WRITE YOUR CODE ABOVE
         break;
 
     case 'remove':
+      console.log('Removing student...')
       /**
        * TODO:
        *  Removes a particular student by email
@@ -60,9 +62,8 @@ async function handleCommand(command) {
        *   - Grab the args (removeEmail)
        *   - Use implemented functions in LinkedList to remove the Student, and display the updated LinkedList
        */
-      console.log('Removing student...')
       // --------> WRITE YOUR CODE BELOW
-      
+      studentManagementSystem.removeStudent(email)
       // --------> WRITE YOUR CODE ABOVE
       break;
 
@@ -75,6 +76,7 @@ async function handleCommand(command) {
        */
       console.log('Displaying students...')
       // --------> WRITE YOUR CODE BELOW
+      studentManagementSystem.displayStudents()
 
       // --------> WRITE YOUR CODE ABOVE
       break;
@@ -91,7 +93,8 @@ async function handleCommand(command) {
        */
       console.log('Finding student...')
       // --------> WRITE YOUR CODE BELOW
-      
+      studentManagementSystem.findStudent(email)
+
       // --------> WRITE YOUR CODE ABOVE
       break;
 
@@ -105,7 +108,8 @@ async function handleCommand(command) {
        *   - Use implemented functions in LinkedList to save the data
        */
       console.log('Saving data...')
-      // --------> WRITE YOUR CODE BELOW
+      // --------> WRITE YOUR CODE BELO
+      studentManagementSystem.saveToJson()
 
       // --------> WRITE YOUR CODE ABOVE
 
@@ -120,7 +124,7 @@ async function handleCommand(command) {
        */
       console.log('Loading data...')
       // --------> WRITE YOUR CODE BELOW
-
+      studentManagementSystem.loadFromJSON()
       // --------> WRITE YOUR CODE ABOVE
       break;
 
@@ -134,6 +138,7 @@ async function handleCommand(command) {
        */
       console.log('Clearing data...')
       // --------> WRITE YOUR CODE BELOW
+      studentManagementSystem.clearStudents()
 
       // --------> WRITE YOUR CODE ABOVE
       break;
